@@ -147,9 +147,10 @@ button{
     .calc-container{
         background-color: var(--container-color);
         width: 100vw;
-        height:700px;
+        height:105vh;
         margin: 0;
-        padding: 70px 70px;
+        padding: 70px 65px;
+
     }
     .theme{
         width: 300px;
@@ -192,6 +193,7 @@ button{
     }
     .attribution{
         margin-left: 7px;
+        font-size: 10px;
     }
 
 }
