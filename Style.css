@@ -1,0 +1,200 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --container-color:#3b4664;
+    --theme-but-color: #252c44;
+    --text-color:#eae3db;
+    --text-area-color:#181f32;
+    --but-text-color:#4d525d;
+    --reset-but-color:#a2b3e1;
+    --reset-but-shadow-color:#414e70;
+    --equal-but-color:#f96c5b;
+    --equal-but-shadow-color:#8f2316;
+    --numbers-but-color:#eee;
+    --numbers-shadow-color:#b0a296;
+}
+.calc-container{
+    background-color: var(--container-color);
+    width: 800px;
+    height:600px;
+    margin: 100px auto;
+    padding: 60px 140px;
+}
+.theme{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    color:var(--text-color);
+    width: 360px;
+    font-family: League Spartan;
+    font-weight: 500;
+    margin: 10px auto;
+}
+h4{
+    font-size: 30px;
+    user-select: none;
+}
+h2{
+    font-size: 12px;
+    width: 40%;
+    display: inline-block;
+    user-select: none;
+    padding-bottom: 5px;
+}
+.theme-but-container{
+    width: 140px;
+    font-weight: 200;
+}
+.theme-but{
+    display: inline-block;
+    font-size: 16px;
+    background-color:var(--theme-but-color);
+    width: 80px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 2px;
+    position: relative;
+}
+.theme-but-ball{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--equal-but-color);
+    position: absolute;
+    left: 3px;
+    transition: left 0.5s;
+}
+.textarea{
+    display: inline-block;
+    background-color:var(--text-area-color);
+    width: 360px;
+    height: 70px;
+    margin: 5px 80px;
+    resize:none;
+    padding:10px;
+    border: none;
+    border-radius: 4px;
+    text-align: right;
+    color:var(--text-color);
+    font-size: 30px;
+    line-height: 50px;
+    overflow: hidden;
+    font-family: League Spartan ;
+}
+.textarea:focus{
+    outline: none;
+}
+.numbers-container{
+    background-color:var(--theme-but-color);
+    padding: 10px;
+    border-radius: 5px;
+    width: 360px;
+    height: 300px;
+    margin: 1px auto;
+}
+.firstrow,.secondrow,.thirdrow,.fourthrow,.fifthrow{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: var(--but-text-color);
+    border-radius: 8px;
+    margin: 6px;
+    font-weight: 600;
+    font-family: League Spartan;
+    box-shadow: 0px 3px var(--numbers-shadow-color);
+    cursor: pointer;
+    background-color: var(--numbers-but-color);
+}
+.firstrow button:last-child, .fifthrow button:first-child{
+    background-color:var(--reset-but-color);
+    color:var(--text-color);
+    box-shadow:0px 3px var(--reset-but-shadow-color)  ;
+}
+.fifthrow button{
+    width: 50%;
+    font-size: 20px;
+    padding-top: 2px;
+}
+.fifthrow button:last-child{
+    background-color:var(--equal-but-color) ;
+    color: var(--text-color);
+    box-shadow:0px 2px var(--equal-but-shadow-color);
+}
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 50px;
+    font-family: League Spartan;
+    color: var(--text-color);
+  }
+
+  .attribution a {
+    color: var(--text-color);
+  }
+
+@media screen and (max-width:435px){
+    .calc-container{
+        background-color: var(--container-color);
+        width: 100vw;
+        height:700px;
+        margin: 0;
+        padding: 70px 70px;
+    }
+    .theme{
+        width: 300px;
+    }
+    h4{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 15px;
+    }
+    .theme-but-container{
+        padding-top: 10px;
+        width: 150px;
+    }
+    .theme-but{
+        font-size: 18px;
+        width: 65px;
+        height: 20px;
+        border-radius: 10px;
+    }
+    .textarea{
+        width: 300px;
+        margin: 5px 0px;
+        font-size: 30px;
+    }
+    .numbers-container{
+        background-color:var(--theme-but-color);
+        padding: 10px;
+        border-radius: 5px;
+        width: 300px;
+        height: 350px;
+        margin: 1px auto;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+        margin: 8px;
+        font-size: 20px;
+    }
+    .attribution{
+        margin-left: 7px;
+    }
+
+}
+
+
+
