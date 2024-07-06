@@ -9,6 +9,7 @@ var numberbuts = document.querySelectorAll(".number-but");
 var equalbut = document.querySelector(".equal");
 var operationsbuts = document.querySelectorAll(".operation-but");
 var istextareaClear = true;
+var isequalbutClicked = false;
 
 
 operationsbuts.forEach(Element=>{
@@ -21,14 +22,11 @@ operationsbuts.forEach(Element=>{
             textspace.textContent += this.textContent;
         }else if(content.includes('+') || content.includes('-') || content.includes('x') || content.includes('/') ){
             calcResult();
+            isequalbutClicked = false;
             textspace.textContent += this.textContent;
-            content += this.textContent;
         }else {
-            if(istextareaClear!=true){
-                textspace.textContent = "" ;
-                istextareaClear = true;
-            }
             textspace.textContent += this.textContent;
+            isequalbutClicked= false;
         }
     }
 })
@@ -38,12 +36,17 @@ equalbut.onclick = function(){
 }
 
 numberbuts.forEach(Element =>{
-  
+   
     Element.onclick = function(){
-        // if(istextareaClear!=true){
-        //     textspace.textContent = "" ;
-        //     istextareaClear = true;
-        // }
+        console.log(isequalbutClicked);
+        if (isequalbutClicked){
+            textspace.textContent = "";
+            isequalbutClicked = false;
+        }
+        if((istextareaClear!=true)){
+            istextareaClear = true;
+            console.log("done");
+        }
         textspace.textContent += this.textContent;
     }
 } )
@@ -101,6 +104,7 @@ function calcResult(){
       Division();
     }
     istextareaClear = false;
+    isequalbutClicked = true;
 }
 
 function setcolor1(){
