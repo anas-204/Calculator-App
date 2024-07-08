@@ -18,9 +18,8 @@
 }
 .calc-container{
     background-color: var(--container-color);
-    width: 800px;
-    height:600px;
-    margin: 100px auto;
+    height:100vh;
+    margin: 0 auto;
     padding: 60px 140px;
 }
 .theme{
@@ -69,6 +68,9 @@ h2{
     position: absolute;
     left: 3px;
     transition: left 0.5s;
+}
+.output{
+    text-align: center;
 }
 .textarea{
     display: inline-block;
